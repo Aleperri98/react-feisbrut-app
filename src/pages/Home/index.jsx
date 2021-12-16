@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
-import { FriendPreview } from '../../components/FriendPreview';
-import { MessagePreview } from ' ../../components/MessagePreview';
-import { Post } from '../../components/Post';
-import styles from './Home.module.scss';
-import { http } from "./../../libs/http"
+import { useState, useEffect } from "react";
+import { FriendPreview } from "../../components/FriendPreview";
+import { MessagePreview } from "../../components/MessagePreview";
+import { Post } from "../../components/Post";
+import { http } from "./../../libs/http";
+import styles from "./Home.module.scss";
+
 
 const friends = [];
 

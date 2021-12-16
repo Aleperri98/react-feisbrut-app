@@ -23,4 +23,4 @@ const MessagePreview = (props) => {
     )
 }
 
-export {MessagePreview}
+export {MessagePreview};
