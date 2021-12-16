@@ -1,47 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FriendPreview } from '../../components/FriendPreview';
 import { MessagePreview } from ' ../../components/MessagePreview';
 import { Post } from '../../components/Post';
 import styles from './Home.module.scss';
+import { http } from "./../../libs/http"
 
-const friends = [
-    { name:"Chandler", photo:"https://randomuser.me/api/portraits/lego/7.jpg"},
-    { name:"Pippo", photo:"https://randomuser.me/api/portraits/lego/6.jpg"},
-    { name:"Geralt", photo:"https://randomuser.me/api/portraits/lego/0.jpg"}
-]
+const friends = [];
 
-const messages= [
-    {  text: "lorem ipsum", date: new Date(), sender: "Pippo" },
-    {  text: "ciao", date: new Date(),sender: "Chandler" },
-    {  text: "come state?", date: new Date(),sender: "Geralt" },
-    {  text: "belloo sto React", date: new Date(),sender: "Geralt" },
-    {  text: "Cosa è React?", date: new Date(),sender: "Pippo" },
-];
+const messages= [];
 
-const posts = [
-    {
-        author: 'User',
-        text: 'Oggi ho mangiato bene',
-        date: newDate(),
-        photo: ""
-    },
-    {
-        author: 'User',
-        text: 'ieri sono stato male',
-        date: newDate()
-    },
-    {
-        author: 'User',
-        text: 'Che bella giornata!',
-        date: newDate()
-    },
-    {
-        author: 'User',
-        text: 'Le temperature si sono abbassate, amici!',
-        date: newDate()
-    
-    }
-];
+const posts = [];
 
 
 const Home = () => {
@@ -50,6 +18,13 @@ const Home = () => {
     const [messagesPreview, setMessagesPreview] = useState(messages);
 
     // setFriendsPreview([])
+    useEffect(() => {
+        http("/friends?_limit=4").then((data) => setFriendsPreview(data));
+    
+        http("/messages?_limit=4").then((data) => setMessagesPreview(data));
+    
+        http("/posts").then((data) => setAllPosts(data));
+    }, []);
 
     return (
         <section className={styles.home}>
