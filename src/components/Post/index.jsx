@@ -1,4 +1,5 @@
 import { ViewDate } from '../ViewDate';
+import { it } from "date-fns/locale";
 import styles from './Post.module.scss';
 
 const Post = (props) => {

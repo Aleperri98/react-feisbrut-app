@@ -29,7 +29,7 @@ const Home = () => {
 
     return (
         <section className={styles.home}>
-        <h3> Benvenuto utent</h3>
+        <h3> Benvenuto utente</h3>
         <div className={styles.grid}>
             <aside>
                 {friendsPreview.map((friend, index) =>(
