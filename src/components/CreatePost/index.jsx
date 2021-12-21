@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react/cjs/react.development";
 import {httpPOST} from "../../libs/http";
+import AdvicePost from "../AdvicePost"
 import styles from "./CreatePost.module.scss";
 
 const CreatePost = () => {
@@ -9,11 +10,17 @@ const CreatePost = () => {
      const [formPostObj, setFormPostObj] = useState("");
 
 
+    const [AdvicePostShow, SetAdvicePostShow] = useState;
+
     const handleSendBtn = (event) => {
         event.preventDefault();
-        httpPOST("/post, formPostObj");
-        alert("Il post è stato creato");
+        httpPOST("/post", formPostObj);
+        <AdvicePost text="Added Post!" color="green" />;
     };
+
+    useEffect(() => {
+
+    }, []);
 
     useEffect(() =>{
         setFormPostObj({
