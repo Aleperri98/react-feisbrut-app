@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import {Header} from "./components/Header";
 import {Footer} from "./components/Footer";
-import CreatePost from './components/CreatePost';
+import NewPost from './pages/CreatePost';
 import Home from "./pages/Home";
 
 
@@ -41,7 +41,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/new-post" element={<CreatePost />}/>
+        <Route path="/new-post" element={<NewPost />}/>
         <Route path="/messages" element={<h3>Messages</h3>}/>
         <Route path="/friends" element={<h3>Friends</h3>}/>
 

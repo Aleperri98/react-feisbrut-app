@@ -3,6 +3,7 @@ import { FriendPreview } from "../../components/FriendPreview";
 import { MessagePreview } from "../../components/MessagePreview";
 import { Post } from "../../components/Post";
 import { http } from "./../../libs/http";
+import { Link } from "react-router-dom";
 import styles from "./Home.module.scss";
 
 
@@ -24,7 +25,7 @@ const Home = () => {
     
         http("/messages?_limit=4").then((data) => setMessagesPreview(data));
     
-        http("/posts").then((data) => setAllPosts(data));
+        http("/posts").then((data) => setAllPosts(data.reverse()));
     }, []);
 
     return (
@@ -37,9 +38,10 @@ const Home = () => {
                 ))}
             </aside>
             <main>
-                {allPosts.map((post, index) =>(
-                <Post key={index} data={post}/>
-                ))}
+                <Link to="/new-post">
+                    <button className={styles.createPostBtn}>+ Create a new post!</button>
+                </Link>
+            {allPosts.map((post, index) => ( <Post key={index} data={post} />))}
             </main>
             <aside>
             {messagesPreview.map((message, index) =>(

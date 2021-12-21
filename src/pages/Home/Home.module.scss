@@ -9,6 +9,28 @@
         column-gap: 20px;
     }
 
+    .createPostBtn {
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 20px;
+
+        background-color: lightskyblue;
+        border-radius: 10px;
+        border: 0;
+        color: $white;
+        font-weight: bold;
+        font-size: 1.1rem;
+        cursor: pointer;
+
+        &:hover {
+            background: rgb(69, 184, 255);
+          }
+          &:active {
+            box-shadow: inset 0 0 4px 2px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+
     .friend {
         margin-bottom: 10px;
     }
