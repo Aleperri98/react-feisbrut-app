@@ -20,7 +20,7 @@ const CreatePost = () => {
             author: authorInput,
             text: messageInput,
             date: new Date().toISOString(),
-            phoyo: imgInput,
+            photo: imgInput,
         });
     }, [authorInput, imgInput, messageInput]);
 
