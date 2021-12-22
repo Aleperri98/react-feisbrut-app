@@ -1,26 +1,22 @@
 import { useState, useEffect } from "react/cjs/react.development";
 import {httpPOST} from "../../libs/http";
-import AdvicePost from "../AdvicePost"
+// import AdvicePost from "../AdvicePost"
 import styles from "./CreatePost.module.scss";
 
 const CreatePost = () => {
     const [authorInput, setAuthorInput] = useState("");
     const [imgInput, setImgInput] = useState("");
     const [messageInput, setMessageInput] = useState("");
-     const [formPostObj, setFormPostObj] = useState("");
-
-
-    const [AdvicePostShow, SetAdvicePostShow] = useState;
+    const [formPostObj, setFormPostObj] = useState("");
+    // const [AdvicePostShow, SetAdvicePostShow] = useState;
 
     const handleSendBtn = (event) => {
         event.preventDefault();
         httpPOST("/post", formPostObj);
-        <AdvicePost text="Added Post!" color="green" />;
+        // <AdvicePost text="Added Post!" color="green" />;
     };
 
-    useEffect(() => {
-
-    }, []);
+   
 
     useEffect(() =>{
         setFormPostObj({
@@ -29,7 +25,8 @@ const CreatePost = () => {
             date: new Date().toISOString(),
             photo: imgInput,
         });
-    }, [authorInput, imgInput, messageInput]);
+    }, 
+    [authorInput, imgInput, messageInput]);
 
     // const handleAuthorInput= (event) => { setAuthorInput(event.target.value)
     // const handleImgInput= (event) => { setImgInput(event.target.value)

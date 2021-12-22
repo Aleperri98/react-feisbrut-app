@@ -22,4 +22,17 @@ fetch(BASE_URL + resource, {
     },
 }).then((response) => response.json());
 
-export { http, httpPOST, httpDELETE };
+
+const fillFriendsList = (friendsNames) => {
+    let value = 0;
+    for (value in [...Array(friendsNames.length).keys()]) {
+      httpPOST("/friends", {
+        name: friendsNames[value],
+        photo: `https://randomuser.me/api/portraits/men/${value}.jpg`,
+      });
+  
+      setTimeout(() => {}, 100);
+    }
+  };
+
+export { http, httpPOST, httpDELETE, fillFriendsList };
