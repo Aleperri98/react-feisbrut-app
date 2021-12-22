@@ -6,6 +6,8 @@ import {Footer} from "./components/Footer";
 import NewPost from "./pages/NewPost";
 import Messages from "./pages/Messages";
 import Friends from "./pages/Friends";
+import Login from "./pages/Login";
+import UserLogin from "./components/UserLogin";
 
 import Home from "./pages/Home";
 
@@ -15,6 +17,7 @@ const INIT_STATE = {
     { link: "/", label: "Home" },
     { link: "/messages", label: "Messages" },
     { link: "/friends", label: "Friends" },
+    { link: "/login", label: "Login" },
   ],
   friendsPreview: [],
 };
@@ -22,7 +25,7 @@ const INIT_STATE = {
 const reducer = (state, action) => {
   switch (action.type) {
     case "change-name":
-      return { ...state, name: "Feisbell" };
+      return { ...state, name: "xxxx" };
     default:
       return state;
   }
@@ -44,6 +47,7 @@ function App() {
         <Route path="/new-post" element={<NewPost />} />
         <Route path="/messages" element={<Messages />} />
         <Route path="/friends" element={<Friends />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
 
       <Footer />

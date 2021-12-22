@@ -1,0 +1,24 @@
+@import "./../../libs/variables.scss";
+
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    input, button {
+        width: 150px;
+        height: 30px;
+        margin: 10px;
+    }
+
+    
+    button:hover {
+        background: rgb(69, 184, 255); ;
+        border: none;
+    }
+
+    button:active {
+        background: $main ;
+    }
+}
