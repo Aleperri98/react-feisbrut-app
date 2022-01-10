@@ -1,18 +1,17 @@
 import { useReducer } from "react";
 import { Routes, Route } from "react-router-dom";
 
-import {Header} from "./components/Header";
-import {Footer} from "./components/Footer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import NewPost from "./pages/NewPost";
 import Messages from "./pages/Messages";
 import Friends from "./pages/Friends";
 import Login from "./pages/Login";
-import UserLogin from "./components/UserLogin";
 
 import Home from "./pages/Home";
 
 const INIT_STATE = {
-  name: "Feisbrut",
+  name: "FeisBell",
   nav: [
     { link: "/", label: "Home" },
     { link: "/messages", label: "Messages" },
@@ -20,12 +19,15 @@ const INIT_STATE = {
     { link: "/login", label: "Login" },
   ],
   friendsPreview: [],
+  fontFamily: "",
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
     case "change-name":
-      return { ...state, name: "xxxx" };
+      return { ...state, name: "FeisBrutt" };
+    case "change-font":
+      return { ...state, fontFamily: "Arial" };
     default:
       return state;
   }
@@ -36,9 +38,14 @@ function App() {
 
   return (
     <div>
-      <Header name={state.name} links={state.nav} />
+      <Header name={state.name} font={state.fontFamily} links={state.nav} />
 
-      <button onClick={() => dispatch({ type: "change-name" })}>
+      <button
+        onClick={() => {
+          dispatch({ type: "change-name" });
+          dispatch({ type: "change-font" });
+        }}
+      >
         Cambia nome
       </button>
 

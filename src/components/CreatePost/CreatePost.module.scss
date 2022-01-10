@@ -1,21 +1,19 @@
 .createPost {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    width: 400px;
 
-    
-    
-    form {
-        display: flex;
-        flex-direction: column;
-        width:400px;
-
-        > * {
-            margin-bottom: 20px;
+    > * {
+      margin-bottom: 20px;
     }
-}
+  }
 
-.__author {
+  .__author {
     display: flex;
     justify-content: space-between;
     gap: 15px;

@@ -1,9 +1,10 @@
-import styles from "./Header.module.scss";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import styles from "./Header.module.scss";
 
 const Header = (props) => {
   const name = props.name || "App";
   const links = props.links || [{ link: "/", label: "Link" }];
+
 
   const CheckActive = (link) => {
     const resolved = useResolvedPath(link);
@@ -14,20 +15,20 @@ const Header = (props) => {
 
   return (
     <header className={styles.header}>
-    <h1>{name}</h1>
-    <nav>
-      <ul>
-        {links.map((item, index) => (
-          <li key={index}>
-            <Link className={CheckActive(item.link)} to={item.link}>
-              {item.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  </header>
-);
+      <h1 style={{ fontFamily: props.font }}>{name}</h1>
+      <nav>
+        <ul>
+          {links.map((item, index) => (
+            <li key={index}>
+              <Link className={CheckActive(item.link)} to={item.link}>
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
+  );
 };
 
-export {Header};
+export default Header;

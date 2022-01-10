@@ -1,5 +1,5 @@
 import styles from "./MessagePreview.module.scss";
-import {ViewDate} from "../ViewDate";
+import {ViewDate} from "./../ViewDate";
 
 const MessagePreview = (props) => {
     const data = props.data || {
@@ -12,7 +12,7 @@ const MessagePreview = (props) => {
             <ViewDate date={data.date} />
             <p>{data.text}</p>
         </div>
-    )
-}
+    );
+};
 
 export {MessagePreview};
