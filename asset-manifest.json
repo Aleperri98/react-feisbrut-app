@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-feisbrut-app/static/css/main.93c45fed.css",
-    "main.js": "/react-feisbrut-app/static/js/main.38969191.js",
+    "main.css": "/react-feisbrut-app/static/css/main.0695fb6b.css",
+    "main.js": "/react-feisbrut-app/static/js/main.fe85b598.js",
     "static/css/890.984387a3.chunk.css": "/react-feisbrut-app/static/css/890.984387a3.chunk.css",
     "static/js/890.29d04e30.chunk.js": "/react-feisbrut-app/static/js/890.29d04e30.chunk.js",
     "static/css/507.84f03f72.chunk.css": "/react-feisbrut-app/static/css/507.84f03f72.chunk.css",
@@ -14,8 +14,8 @@
     "static/js/787.e4be14cf.chunk.js": "/react-feisbrut-app/static/js/787.e4be14cf.chunk.js",
     "static/js/911.9cfcbf44.chunk.js": "/react-feisbrut-app/static/js/911.9cfcbf44.chunk.js",
     "index.html": "/react-feisbrut-app/index.html",
-    "main.93c45fed.css.map": "/react-feisbrut-app/static/css/main.93c45fed.css.map",
-    "main.38969191.js.map": "/react-feisbrut-app/static/js/main.38969191.js.map",
+    "main.0695fb6b.css.map": "/react-feisbrut-app/static/css/main.0695fb6b.css.map",
+    "main.fe85b598.js.map": "/react-feisbrut-app/static/js/main.fe85b598.js.map",
     "890.984387a3.chunk.css.map": "/react-feisbrut-app/static/css/890.984387a3.chunk.css.map",
     "890.29d04e30.chunk.js.map": "/react-feisbrut-app/static/js/890.29d04e30.chunk.js.map",
     "507.84f03f72.chunk.css.map": "/react-feisbrut-app/static/css/507.84f03f72.chunk.css.map",
@@ -29,7 +29,7 @@
     "911.9cfcbf44.chunk.js.map": "/react-feisbrut-app/static/js/911.9cfcbf44.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93c45fed.css",
-    "static/js/main.38969191.js"
+    "static/css/main.0695fb6b.css",
+    "static/js/main.fe85b598.js"
   ]
 }
