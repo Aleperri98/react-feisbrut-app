@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfeisbrut_app=self.webpackChunkfeisbrut_app||[]).push([[622],{622:function(e,s,u){u.r(s);var n=u(184);s.default=function(){return(0,n.jsx)("h1",{children:"Messages"})}}}]);
+//# sourceMappingURL=622.84a4b799.chunk.js.map

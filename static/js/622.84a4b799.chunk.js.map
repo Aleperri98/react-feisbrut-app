@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/622.84a4b799.chunk.js","mappings":"oIAOA,UAJiB,WACb,OAAO","sources":["pages/Messages/index.jsx"],"sourcesContent":["// import styles from \"./Messages.module.scss\";\n// import { useState, useEffect} from \"react\";\n\nconst Messages = () => {\n    return <h1>Messages</h1>;\n};\n\nexport default Messages;"],"names":[],"sourceRoot":""}
