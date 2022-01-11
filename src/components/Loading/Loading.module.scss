@@ -1,0 +1,24 @@
+@import "./../../libs/variables.scss";
+
+.container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+
+.loader {
+    border: 10px solid $lightGray;
+    border-top: 10px groove $main;
+    box-shadow: 3px 8px 2pc 10px $lightGray;
+    // box-shadow: 2px 2px 8px $lightGray, 4px 4px 8px $main, 6px 6px 8px $secondary;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: round 2s linear infinite;
+
+    @keyframes round {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+  }
+}  
+   
