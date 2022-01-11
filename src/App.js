@@ -1,4 +1,4 @@
-import { useReducer, Suspense } from "react";
+import { useReducer, Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
